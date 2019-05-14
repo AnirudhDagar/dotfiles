@@ -93,19 +93,33 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-alias zshconfig="vim ~/.zshrc"
-alias vimconfig="vim ~/.vimrc"
-alias sshdosa="ssh anirudh@dosa.cds.iisc.ac.in"
-alias sshidli="ssh anirudh@idli.cds.iisc.ac.in"
-alias sshpuri="ssh anirudh@puri.cds.iisc.ac.in"
-alias sshmomo="ssh anirudh@momo.cds.iisc.ac.in"
-alias sshpeda="ssh anirudh@peda.cds.iisc.ac.in"
-alias sshpani="ssh anirudh@pani.cds.iisc.ac.in"
-alias sshpoha="ssh anirudh@poha.cds.iisc.ac.in"
+# Aliases
+alias zshconf="vim ~/.zshrc"
+alias vimconf="vim ~/.vimrc"
+# ssh Servers CDS IISc MALL Lab
+alias sshdosa="ssh -L localhost:16005:localhost:6005 anirudh@dosa.cds.iisc.ac.in"
+alias sshidli="ssh -L localhost:16007:localhost:6007 anirudh@idli.cds.iisc.ac.in"
+alias sshpuri="ssh -L localhost:16008:localhost:6008 anirudh@puri.cds.iisc.ac.in"
+alias sshmomo="ssh -L localhost:16009:localhost:6009 anirudh@momo.cds.iisc.ac.in"
+alias sshpeda="ssh -L localhost:16006:localhost:6006 anirudh@peda.cds.iisc.ac.in"
+alias sshpani="ssh -L localhost:16004:localhost:6004 anirudh@pani.cds.iisc.ac.in"
+alias sshpoha="ssh -L localhost:16003:localhost:6003 anirudh@poha.cds.iisc.ac.in"
+# Mount Servers CDS IISc MALL Lab
+alias mntdosa="sshfs anirudh@dosa.cds.iisc.ac.in:/scratche/ /Users/gollum/Desktop/Work/mount -ovolname=dosa"
+alias mntidli="sshfs anirudh@idli.cds.iisc.ac.in:/scratche/ /Users/gollum/Desktop/Work/mount -ovolname=idli"
+alias mntpuri="sshfs anirudh@puri.cds.iisc.ac.in:/scratche/ /Users/gollum/Desktop/Work/mount -ovolname=puri"
+alias mntmomo="sshfs anirudh@momo.cds.iisc.ac.in:/scratche/ /Users/gollum/Desktop/Work/mount -ovolname=momo"
+alias mntpeda="sshfs anirudh@peda.cds.iisc.ac.in:/scratche/ /Users/gollum/Desktop/Work/mount -ovolname=peda"
+alias mntpani="sshfs anirudh@pani.cds.iisc.ac.in:/scratche/ /Users/gollum/Desktop/Work/mount -ovolname=pani"
+alias mntpoha="sshfs anirudh@poha.cds.iisc.ac.in:/scratche/ /Users/gollum/Desktop/Work/mount -ovolname=poha"
+# Unmount Server
+alias unmount="sudo umount /Users/gollum/Desktop/Work/mount"
+
 alias ..="cd .."
 alias ...="cd ../../../"
 alias grep="grep --color=auto"
+
+#To working dir
 alias tw="cd /Users/gollum/Desktop/Work"
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
