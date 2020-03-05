@@ -94,8 +94,8 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Aliases
-alias zshconf="vim ~/.zshrc"
-alias vimconf="vim ~/.vimrc"
+alias zshrc="vim ~/.zshrc"
+alias vimrc="vim ~/.vimrc"
 # ssh Servers CDS IISc MALL Lab
 alias sshdosa="ssh -L localhost:16005:localhost:6005 anirudh@dosa.cds.iisc.ac.in"
 alias sshidli="ssh -L localhost:16007:localhost:6007 anirudh@idli.cds.iisc.ac.in"
@@ -121,13 +121,25 @@ alias grep="grep --color=auto"
 
 #To working dir
 alias tw="cd /Users/gollum/Desktop/Work"
-
+#To downloads dir
+alias td="cd /Users/gollum/Downloads"
+#git aliases
+alias glod='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'\'
+alias graph='git log --all --decorate --oneline --graph'
+alias gsync='git checkout master && git fetch upstream && git reset upstream/master && git push --force'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+#Mac Utility aliases
+alias audio_fix='sudo killall coreaudiod'
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export PYTHONPATH=$PYTHONPATH:pwd:pwd/slim
+export PATH=/Library/TeX/texbin:$PATH
+export PATH="/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin:$PATH"
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
 
