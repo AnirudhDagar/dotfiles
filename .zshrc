@@ -96,6 +96,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias zshrc="vim ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
+alias thisroot="source /Users/gollum/Desktop/Work/gsoc/root/_build/bin/thisroot.sh"
 # ssh Servers CDS IISc MALL Lab
 alias sshdosa="ssh -L localhost:16005:localhost:6005 anirudh@dosa.cds.iisc.ac.in"
 alias sshidli="ssh -L localhost:16007:localhost:6007 anirudh@idli.cds.iisc.ac.in"
@@ -112,6 +113,10 @@ alias mntmomo="sshfs anirudh@momo.cds.iisc.ac.in:/scratche/ /Users/gollum/Deskto
 alias mntpeda="sshfs anirudh@peda.cds.iisc.ac.in:/scratche/ /Users/gollum/Desktop/Work/mount -ovolname=peda"
 alias mntpani="sshfs anirudh@pani.cds.iisc.ac.in:/scratche/ /Users/gollum/Desktop/Work/mount -ovolname=pani"
 alias mntpoha="sshfs anirudh@poha.cds.iisc.ac.in:/scratche/ /Users/gollum/Desktop/Work/mount -ovolname=poha"
+
+# ssh Vernacular AWS Machines
+alias sshmadhouse="ssh -L localhost:16005:localhost:6005 -i "~/.ssh/vernacular-default.pem" ubuntu@ec2-15-206-95-135.ap-south-1.compute.amazonaws.com"
+
 # Unmount Server
 alias unmount="sudo umount /Users/gollum/Desktop/Work/mount"
 
@@ -131,6 +136,8 @@ alias gsync='git checkout master && git fetch upstream && git reset upstream/mas
 
 #Mac Utility aliases
 alias audio_fix='sudo killall coreaudiod'
+alias touchbar_fix="sudo pkill TouchBarServer"
+
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -142,4 +149,23 @@ export PATH="/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin:$PA
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
+
+
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/gollum/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/gollum/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/gollum/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/gollum/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
