@@ -117,6 +117,8 @@ alias mntpoha="sshfs anirudh@poha.cds.iisc.ac.in:/scratche/ /Users/gollum/Deskto
 # ssh Vernacular AWS Machines
 alias sshmadhouse="ssh -L localhost:16005:localhost:6005 -i "~/.ssh/vernacular-default.pem" ubuntu@ec2-15-206-95-135.ap-south-1.compute.amazonaws.com"
 
+# ssh GSoC Machine @CERN
+alias sshgsoc="ssh -L localhost:16005:localhost:6005 gsoc0@c3.itm.edu.co"
 # Unmount Server
 alias unmount="sudo umount /Users/gollum/Desktop/Work/mount"
 
