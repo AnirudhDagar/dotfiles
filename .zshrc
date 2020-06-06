@@ -119,6 +119,10 @@ alias sshmadhouse="ssh -L localhost:16005:localhost:6005 -i "~/.ssh/vernacular-d
 
 # ssh GSoC Machine @CERN
 alias sshgsoc="ssh -L localhost:16005:localhost:6005 gsoc0@c3.itm.edu.co"
+
+# ssh Azure Machine
+alias sshazure="ssh -L localhost:16005:localhost:6005 AzureUser@13.93.73.210"
+
 # Unmount Server
 alias unmount="sudo umount /Users/gollum/Desktop/Work/mount"
 
