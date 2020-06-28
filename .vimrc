@@ -14,7 +14,7 @@ set ignorecase
 set smartcase
 
 " Show linenumbers
-set number
+set relativenumber
 
 " Mouse Support
 set mouse=a
